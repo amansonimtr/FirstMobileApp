@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'Home_Page.dart';
+import 'package:youtube/pages/login.dart';
+import 'pages/Home_Page.dart';
 
 void main(){
   runApp(Youtube());
@@ -13,7 +14,16 @@ class Youtube extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      // home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        brightness: Brightness.light
+      ),
+      initialRoute: "/login",
+      routes:{
+        "/": (context)=> LoginPage(),
+        "/home":(context) => HomePage()
+      },
     );
   }
 }
