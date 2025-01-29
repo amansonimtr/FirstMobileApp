@@ -19,9 +19,10 @@ class Youtube extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light
       ),
-      initialRoute: "/login",
+      
+      initialRoute: '/login',
       routes:{
-        "/": (context)=> LoginPage(),
+        "/login": (context)=> LoginPage(),
         "/home":(context) => HomePage()
       },
     );
